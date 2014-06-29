@@ -1,0 +1,1 @@
+This is a compilation of FE4A's Event source. Chapters 4-6 were lost in a hard-drive wipe; I was able to disassemble Chapter 5 and 6 (6 was never finished), but Chapter 4 is likely lost. Maybe you'll find something in here useful.

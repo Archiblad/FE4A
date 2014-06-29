@@ -1,0 +1,119 @@
+//For assembling as separate chapter
+#ifndef RELEASE_FE4A
+#include "FE4A definitions.txt"
+
+//EventPointerTable(6,ThisChapter) //What chapter is this chapter replacing?
+
+org 0xD83520
+ThisChapter:
+#endif //End of RELEASE_FE4A
+
+POIN Turn_events //Turn-based Events
+POIN Character_events //Character-based Events
+POIN Location_events //Location-based Events
+POIN Misc_events //Misc events
+POIN Ballista_filler Ballista_filler //ballista data
+POIN Pricks Pricks Pricks Pricks //enemy data
+POIN Mega_Badass Mega_Badass Mega_Badass Mega_Badass //ally data
+POIN Opening_event Ending_event //Pointer to opening and ending scenes
+
+//Unit Data
+Mega_Badass:
+UNIT Eltosian Paladin 0x00 0xC8 [9,28] [10,30] Iron_sword $00000000
+UNIT Empty
+Badass1:
+UNIT 0x8F Cavalier 0x00 0x52 [9,28] [9,31] [Steel_sword,Javelin] [$00000000]
+UNIT Empty
+Badass2:
+UNIT 0x8F Cavalier 0x00 0x52 [9,28] [10,31] [Steel_sword,Javelin] [$00000000]
+UNIT Empty
+Badass3:
+UNIT 0x8F Cavalier 0x00 0x52 [9,28] [9,29] [Steel_sword,Javelin] [$00000000]
+UNIT Empty
+Badass4:
+UNIT 0x8F Cavalier 0x00 0x52 [9,28] [9,30] [Steel_sword,Javelin] [$00000000]
+UNIT Empty
+Badass5:
+UNIT 0x8F Cavalier 0x00 0x52 [9,28] [8,31] [Steel_sword,Javelin] [$00000000]
+UNIT Empty
+Badass6:
+UNIT 0x1E Cavalier 0x00 0x52 [9,28] [10,29] [Steel_sword,Javelin] [$00000000]
+UNIT Empty
+Badass7:
+UNIT 0x8F Cavalier 0x00 0x52 [9,28] [8,29] [Steel_sword,Javelin] [$00000000]
+UNIT Empty
+Badass8:
+UNIT 0x8F Cavalier 0x00 0x52 [9,28] [8,30] [Steel_sword,Javelin] [$00000000]
+UNIT Empty
+Pricks:
+UNIT 0x90 Lance_knight 0x00 0x45 [22,30] [22,30] Steel_lance $00000000
+UNIT 0x91 Glory_knight 0x00 0x45 [22,31] [22,31] Steel_lance $00000000
+UNIT 0x90 Lance_knight 0x00 0x45 [22,32] [22,32] Steel_lance $00000000
+UNIT 0x90 Lance_knight 0x00 0x45 [23,30] [23,30] Steel_lance $00000000
+UNIT 0x90 0x4D 0x00 0x45 [23,31] [23,31] Steel_axe $00000000
+UNIT 0x90 Lance_knight 0x00 0x45 [23,32] [23,32] Steel_lance $00000000
+UNIT 0x90 Lance_knight 0x00 0x45 [24,30] [24,30] Steel_lance $00000000
+UNIT 0x90 0x4D 0x00 0x45 [24,31] [24,31] Steel_axe $00000000
+UNIT 0x90 Lance_knight 0x00 0x45 [24,32] [24,32] Steel_lance $00000000
+UNIT 0x90 Lance_knight 0x00 0x45 [25,30] [25,30] Steel_lance $00000000
+UNIT 0x90 0x4D 0x00 0x45 [25,31] [25,31] Steel_axe $00000000
+UNIT 0x90 Lance_knight 0x00 0x45 [25,32] [25,32] Steel_lance $00000000
+UNIT Empty
+
+Turn_events:
+TURN 0x00 Opening_event [01,00] 00 00
+CODE $00
+
+Location_events:
+CODE $00
+
+Character_events:
+CHAR 0x05 Eltosian_And_Lachy Lachesis Eltosian 00
+CODE $00
+
+Misc_events:
+DefeatAll(Ending_event)
+CauseGameOverIfLordDies //Game over command
+CODE $00
+
+Ballista_filler:
+CODE $00
+
+Opening_event:
+FADU 5
+LOU1 Pricks
+ENUN
+CAM1 0x91
+CURF 0x91
+TEX1 0x0859
+REMA
+MUS1 0x0032 
+CAM1 [9,28]
+CURF [9,28]
+FADI 5
+BACG 0x14
+FADU 5
+TEX1 0x0852
+REMA
+LOU1 Badass1 Badass2 Badass3 Badass4 
+LOU1 Badass5 Badass6 Badass7 Badass8 
+LOU1 Mega_Badass
+ENUN
+CAM1 0x91
+TEX1 0x0853
+REMA
+ENDB
+
+Eltosian_And_Lachy:
+TEX1 0x0854
+REMA
+
+Ending_event:
+TEX1 0x0854
+REMA
+MNCH 0x02
+ENDA
+
+#ifndef RELEASE_FE4A
+MESSAGE Chapter 1x events end at offset currentOffset
+#endif //End of RELEASE_FE4A

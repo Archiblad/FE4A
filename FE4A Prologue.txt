@@ -1,0 +1,502 @@
+//For assembling as separate chapter
+#ifndef RELEASE_FE4A
+#include "FE4A definitions.txt"
+
+EventPointerTable(6,ThisChapter)
+
+org 0xD80000
+ThisChapter:
+#endif //End of RELEASE_FE4A
+
+//Actual events:
+POIN Turn_events Character_events Location_events Misc_events
+POIN Ballista_filler Ballista_filler
+POIN Bandits Bandits Bandits Bandits
+POIN Bandits Bandits Bandits Bandits
+POIN Opening_event Evans_sieze
+
+Bandits:
+UNIT 0x88 Bandit DiMaggio 0x0C [15,20] [21,24] [Iron_axe] [0x00, 0x03, 0x00, 0x00]
+UNIT 0x88 Bandit DiMaggio 0x0C [15,21] [20,25] [Iron_axe] [0x00, 0x03, 0x00, 0x00] 
+UNIT 0x88 Bandit DiMaggio 0x0C [15,21] [19,24] [Iron_axe] [0x00, 0x03, 0x00, 0x00] 
+UNIT 0x88 Bandit DiMaggio 0x0C [15,21] [17,25] [Iron_axe] [0x00, 0x03, 0x00, 0x00] 
+UNIT Empty
+
+Bandits2:
+UNIT 0x88 Bandit DiMaggio 0x0C [22,19] [25,23] Iron_axe $00
+UNIT 0x91 0x50 DiMaggio 0x0C [22,19] [23,24] Iron_bow $00
+UNIT 0x88 Bandit DiMaggio 0x0C [24,19] [25,25] [Iron_axe] [0x00, 0x03, 0x00, 0x00]
+UNIT 0x91 0x50 DiMaggio 0x0C [15,21] [16,23] [Iron_bow] [0x00, 0x03, 0x00, 0x00]
+UNIT Empty 
+
+Bandits3:
+UNIT 0x88 Bandit DiMaggio 0x0C [23,19] [23,22] Iron_axe $00 
+UNIT 0x88 Bandit DiMaggio 0x0C [23,19] [24,21] Iron_axe $00 
+UNIT 0x88 Bandit DiMaggio 0x0C [23,19] [23,20] Iron_axe $00
+UNIT Empty 
+
+Bandits4:
+UNIT Gerrard Fighter 0x00 0x44 [01,10] [01,10] [Steel_axe,Hand_axe] [3,3,9,0x20]
+UNIT DiMaggio Fighter 0x00 0x24 [14,20] [21,25] [Steel_axe,0x98]  [3,3,9,0x20]
+UNIT Gandolf Warrior 0x00 0x24 [14,20] [20,24] [Tomahawk] [3,3,9,0x20]
+UNIT Empty
+
+Bandits5:
+UNIT 0x88 Bandit DiMaggio 0x0C [28,22] [28,22] Iron_axe $00 //Gets loaded after
+UNIT 0x88 Bandit DiMaggio 0x0C [28,20] [28,20] Iron_axe $00 //Miledy appers
+UNIT 0x88 Bandit DiMaggio 0x0C [32,20] [32,20] Iron_axe $00
+UNIT 0x88 Bandit DiMaggio 0x0C [32,18] [32,15] Iron_axe $00
+UNIT Empty 
+
+Bandits6:
+UNIT 0x88 Bandit DiMaggio 0x0C [18,06] [18,06] Iron_axe $00
+UNIT 0x88 Bandit DiMaggio 0x0C [19,07] [19,07] Iron_axe $00
+UNIT 0x88 Bandit DiMaggio 0x0C [20,06] [20,06] Iron_axe $00
+UNIT Empty 
+
+Bandits7:
+UNIT 0x88 Bandit DiMaggio 0x0C [17,8] [17,8] [Iron_axe]   [0x00,0x04,0x01,0x00] //I'd appreciate it if this is where all village destroying units would be.
+UNIT 0x88 Bandit DiMaggio 0x0C [29,10] [29,10] [Iron_axe] [0x00,0x04,0x01,0x00] //AI is set.
+UNIT 0x88 Bandit DiMaggio 0x0C [33,1] [33,1] [Iron_axe]   [0x00,0x04,0x01,0x00] 
+UNIT 0x88 Bandit DiMaggio 0x0C [15,15] [15,15] [Iron_axe] [0x00,0x04,0x01,0x00]
+UNIT 0x88 Bandit DiMaggio 0x0C [33,6] [33,6] [Iron_axe]   [0x00,0x04,0x01,0x00]
+UNIT Empty 
+
+Midir1:
+UNIT 0x0D Bow_knight Edain 0x22 [20,23] [20,23] Iron_bow $00000000
+UNIT Empty 
+
+Knights:
+UNIT Sigurd Knight_lord 0x00 0x28 [34,09] [34,12] [Steel_sword,Old_sword] [00000000]
+UNIT Alec Cavalier Sigurd 0x10 [34,09] [33,11] [Iron_sword,Iron_lance] [000000000]
+UNIT Noish Cavalier Sigurd 0x18 [34,09] [35,11] [Steel_sword,Iron_sword] [000000000]
+UNIT Empty 
+
+Knights2:
+UNIT Arden Sword_armor Sigurd 0x18 [34,09] [34,09] Iron_sword $000000000
+UNIT Empty
+
+Lenster:
+UNIT Cuan Duke_knight 0x0 0x08 [35,12] [32,12] [Javelin,Steel_lance] $00000000
+UNIT Ethlin Troubadour Cuan 0x08 [35,12] [33,12] [Slim_sword,Heal] $00000000
+UNIT Fin Lance_knight Cuan 0x08 [35,12] [34,12] Iron_lance $00000000
+UNIT Empty 
+
+Helpers:
+UNIT Lex 0x4E Sigurd 0x20 [28,00] [29,05] Iron_axe $00000000
+UNIT Azel 0x38 Sigurd 0x10 [27,00] [29,04] Fire $00000000
+UNIT Empty 
+
+Midir2:
+UNIT Midir 0x2F Sigurd 0x20 [20,22] [20,24] Iron_bow $00000000
+UNIT Empty 
+
+Alvis1:
+UNIT Alvis Sage 0x00 0xF2 [20,0] [19,02] [Falaflame] [0x06,0x0B,0x0A,0x00]
+UNIT Empty
+
+Edain1:
+UNIT Edain Cleric 0x00 0x0A [20,23] [20,23] Mend $00
+UNIT Empty
+
+Edain2: 
+UNIT Edain Cleric 0x00 0x0A [1,11] [2,11] Mend $00
+UNIT Empty 
+
+Bridge_guy:
+UNIT 0x8A Bandit Gerrard 0x44 [01,10] [05,12] Iron_axe $00 //Bandit that places the bridge, do not edit coordinates!
+UNIT Empty
+
+Bandits8:
+UNIT 0x88 Bandit Gerrard 0x44 [1,10] [0,11] Iron_axe $00
+UNIT 0x88 Bandit Gerrard 0x44 [1,10] [0,12] Iron_axe $00
+UNIT 0x88 Bandit Gerrard 0x44 [1,10] [1,11] Iron_axe $00
+UNIT 0x88 Bandit Gerrard 0x44 [1,10] [1,12] Iron_axe $00
+UNIT 0x88 Bandit Gerrard 0x44 [1,10] [2,11] Iron_axe $00
+UNIT 0x88 Bandit Gerrard 0x44 [1,10] [2,12] Iron_axe $00
+UNIT 0x88 Bandit Gerrard 0x44 [1,10] [3,11] Iron_axe $00
+UNIT 0x88 Bandit Gerrard 0x44 [1,10] [3,12] Iron_axe $00
+UNIT Empty
+
+Special:
+UNIT 0x88 Bandit Gerrard 0x44 [1,10] [05,12] Iron_axe $00
+UNIT Empty
+
+Grandbell:
+UNIT 0xCD Paladin 0x00 0x0A [19,0] [7,12] Iron_lance $00
+UNIT Empty
+
+
+
+
+Turn_events:
+TURN 0x00 Opening_event [01,00] 0x0 0x00
+TURN 0x00 End_of_turn_one [01,00] 0x8 0x00
+TURN 0x00 Turn_two [02,00] 0x0 0x00
+TURN 0x00 Turn_three [03,00] 0x0 0x00
+TURN 0x0C Gerrard_action [01,99] 0x8 0x00
+TURN 0x0D Alvis_appears [01,99] 0x0 0x00
+TURN 0x12 After_Alvis_and_Sigurd [1,99] 0x0 0x00
+CODE $00000000
+
+
+Character_events:
+CHAR 0x0E Alvis_and_Sigurd 0x7A Sigurd 0x00
+CHAR 0x13 Midir_and_Darren 0x1F 0x2E 0x00
+CHAR 0x0F Sigurd_and_Ethlin Ethlin Sigurd 0x00
+CHAR 0x10 Lex_and_Sigurd Lex Sigurd 0x00
+CHAR 0x10 Azel_and_Sigurd Sigurd Azel 0x00
+CHAR 0x11 Cuan_and_Sigurd Cuan Sigurd 0x00
+CHAR 0x11 Cuan_and_Sigurd Sigurd Cuan 0x00
+CODE $00000000
+
+
+Location_events:
+Sieze(0x05, Jungby_sieze, 20,23) //Jungby siezing
+Village(0x06,Village_one,17,28)
+Village(0x07,Village_two,26,12)
+Village(0x08,Village_three,12,13)
+Village(0x09,Village_four,27,04)
+Village(0x0A,Village_five,12,2)
+Sieze(0x0B, Evans_sieze, 01,10) //Evans siezing
+CODE $00000000
+
+
+Misc_events:
+CauseGameOverIfLordDies
+CODE $00000000
+
+
+Ballista_filler:
+CODE $00
+
+
+Opening_event:
+CODE $3D // line 126
+MUS1 0x0032
+CAM1 [20,23] //Camera on Jungby
+CODE $0C
+LOU1 Bandits Bandits2 Bandits3 Bandits4 
+ENUN
+CURF [20,23]
+FADI 0x10
+BACG 0x15
+FADU 0x15
+TEX1 0x0815
+REMA
+LOU1 Midir1
+ENUN
+CAM2 [34,9]
+LOU1 Bandits5 Bandits6 Bandits7
+ENUN
+CURF [34,9]
+FADI 0x10
+BACG 0x15
+FADU 0x15
+TEX1 0x0851
+REMA
+LOU1 Knights
+ENUN
+LOU1 Knights2
+ENUN
+ENDA
+
+
+End_of_turn_one:
+MUS1 0x0C 
+CAM1 Gandolf
+TEX1 0x0817
+REMA
+CURF 0x0D
+FIGH Gandolf 0x0D Fight $00000000
+KILL 0x0D
+UNCR Gandolf 0x02
+MOVE Gandolf [20,23]
+ENUN
+FADI 0x10
+BACG 0x15
+FADU 0x15
+TEX1 0x0818
+REMA
+MOVE Gandolf [20,24]
+ENUN
+LOU1 Edain1
+ENUN
+TEX1 0x0819
+REMA
+DISA Edain 
+ENUN
+UNCM Gandolf 0x10
+STAL 0x10
+MOVE Gandolf [13,19]
+ENUN
+TEX1 0x081A
+REMA
+MOVE Gandolf [1,11]
+ENUN
+LOU1 Edain2
+ENUN
+UNCR Gandolf 0x10
+ENUN
+TEX1 0x081B
+REMA
+DISA Edain
+ENUN
+UNCM Gandolf 0x10
+MOVE Gandolf [03,29]  
+DISA Edain
+ENUN
+DISA Gandolf
+ENUN
+CAM1 [01,10]
+TEX1 0x0814
+REMA
+LOU1 Bridge_guy Move
+ENUN
+STAL 0x10
+MAC1 0x00 0x0
+MOVE 0x8A [01,10] //moves the unit to castle
+ENUN
+DISA 0x8A
+ENUN
+CAM1 [20,23] //moves camera on Jungby castle
+TEX1 0x081C
+REMA
+MOVE DiMaggio [20,23] //moves batta on castle gate
+ENUN
+ENDA
+
+
+Turn_two:
+MUS1 0x0042
+LOU1 Helpers
+ENUN
+TEX1 0x081D
+REMA
+ENDA
+
+
+Turn_three:
+MUS1 0x0042
+LOU1 Lenster
+ENUN
+TEX1 0x081E
+REMA
+ENDA
+
+
+Jungby_sieze:
+MUS1 0x42
+FADI 0x10
+BACG 0x15
+FADU 0x15
+TEX1 0x081F
+REMA
+LOU1 Midir2
+ENUN
+ENDA
+
+
+Gerrard_action:
+IFEV 0x01 0x05
+MUS1 0x0C
+CAM1 Gerrard
+CURF Gerrard
+TEX1 0x0820
+REMA
+LOU1 Bandits8 //load enemies
+ENUN
+LOU1 Special //loads special enemy
+ENUN
+MAC1 0x0B 0x0
+ELSE 0x09
+ENIF 0x01
+ENUT 0x0C
+ENIF 0x09
+ENDA
+
+
+Alvis_appears:
+IFEV 0x01 0x0C
+MUS1 0x4A
+CAM1 [20,00]
+LOU1 Alvis1 //Load Alvis
+ENUN
+TEX1 0x0821
+REMA
+MOVE 0x7A [18,05]
+ENUN
+ELSE 0x09
+ENIF 0x01
+ENUT 0x0D
+ENIF 0x09
+ENDA
+
+
+Alvis_and_Sigurd:
+MUS1 0x4A
+TEX1 0x0822
+REMA
+MUEN 0x10
+ENDA
+
+
+After_Alvis_and_Sigurd:
+IFEV 0x01 0x0E
+CODE $CD $7A $00 
+DISA 0x7A 
+CODE $42
+POIN $20AB9
+STAL 0x20
+ITGC Sigurd 0x7C
+ELSE 0x09
+ENIF 0x01
+ENUT 0x12
+ENIF 0x09
+ENDA   
+
+
+Sigurd_and_Ethlin:
+MUS1 0x3D //line 338
+TEX1 0x0823
+REMA
+ENDA
+
+
+Village_one:
+FADI 0x10
+BACG 0x02
+FADU 0x15
+TEX1 0x0824
+REMA
+ITGV Agility_ring
+ENDA
+
+
+Village_two:
+FADI 0x10
+BACG 0x02
+FADU 0x15
+TEX1 0x0825
+REMA
+ITGV Steel_sword
+ENDA
+
+
+Village_three:
+FADI 0x10
+BACG 0x02
+FADU 0x15
+TEX1 0x0826
+REMA
+ITGV Iron_blade
+ENUF 0x8A
+ENDA
+
+
+Village_four:
+FADI 0x10
+BACG 0x02
+FADU 0x15
+TEX1 0x0827
+REMA
+MONE 0x00 5000
+ENDA
+
+
+Village_five:
+FADI 0x10
+BACG 0x02
+FADU 0x15
+TEX1 0x0828
+REMA
+ITGV Mend
+ENDA
+
+
+Cuan_and_Sigurd:
+TEX1 0x0828
+REMA
+ENDA
+
+
+Midir_and_Darren:
+TEX1 0x082A
+REMA
+ENDA
+
+
+Azel_and_Sigurd:
+TEX1 0x0829
+ITGC Azel Thunder
+REMA
+ENDA
+
+
+Lex_and_Sigurd:
+TEX1 0x082B
+ITGC Lex Hand_axe
+REMA
+ENDA
+
+
+Evans_sieze:
+//DEBU ON
+MUS1 0x38
+FADI 0x10
+BACG 0x36
+FADU 0x15
+TEX1 0x082E
+FADI 0x20
+FADU 0x20
+REMA
+CAM1 [19,0]
+LOU1 Grandbell
+ENUN
+DISA 0x03 //Sigurd enters Evans
+ENUN
+MOVE 0xCD [1,10]
+ENUN
+DISA 0xCD
+ENUN
+FADI 0x8
+BACG 0x15
+FADU 0x10
+TEX1 0x082D
+REMA
+MUS1 0x03A3
+FADI 0x10
+BACG 0x36
+FADU 0x15
+TEX1 0x0835
+REMA
+MNCH 0x01
+ENDA
+
+
+Fight:
+CODE $20010001 //439 //465
+CODE $00800000 
+
+
+Move:
+CODE $00000000 
+CODE 0x03 0x03 0x04 
+CODE 0x00 0x04 //Left
+CODE 0x01 0x04 //Right
+CODE 0x02 0x04 //Down
+CODE 0x03 0x04
+
+
+Chalphy_sieze:
+IFAF 0x01 $7A305
+MAC1 0x0C 0x00
+SOUN 0xAB
+STAL 0x10
+ASMC $79705
+ENIF 0x01
+ENDA
+
+#ifndef RELEASE_FE4A
+MESSAGE Prologue events end at offset currentOffset
+#endif //End of RELEASE_FE4A

@@ -1,0 +1,183 @@
+//to prevent double definitions
+#ifndef _FE4A_DEFINITIONS_
+#define _FE4A_DEFINITIONS_
+
+//We make our own definitions, but we want the macro's
+#define _NO_FE7_DEFINITIONS_
+#include EAstdlib.event
+
+
+//AI_Codes
+
+//End AI_Codes
+
+
+//FE4A_Character_Codes
+#define Dierdre 0x02
+#define Sigurd 0x03
+#define Tiltyu 0x04
+#define Ayra 0x06
+#define Arden 0x08
+#define Beowulf 0x09
+#define Holyn 0x0B
+#define Fury 0x0E
+#define Edain 0x11
+#define Azel 0x13
+#define Claude 0x16
+#define Fin 0x19
+#define Cuan 0x1A
+#define Lachesis 0x1B
+#define Darren 0x1F
+#define Dew 0x23
+#define Sylvia 0x25
+#define Levin 0x26
+#define Arnold 0x28
+#define Lex 0x2C
+#define Midir 0x2E
+#define Noish 0x2F
+#define Alec 0x30
+#define Ethlin 0x31
+#define Jamuka 0x32
+#define Brigid 0x33
+
+#define Alvis 0x7A
+#define Eltosian 0x7B
+#define DiMaggio 0x87
+#define Gerrard 0x89
+#define Gandolf 0x94
+//End FE4A_Character_Codes
+
+//Class_Codes
+#define Lord 0x01
+
+#define Prince 0x03
+
+#define Knight_lord 0x07
+#define Oracle 0x08
+#define RoyalKnight 0x09
+#define Mercenary 0x0A
+
+#define Hero 0x0C
+#define Myrmidon 0x0D
+#define Myrmidon_f 0x0E
+#define Swordmaster 0x10
+#define Swordmaster_f 0x11
+#define Fighter 0x12
+#define Warrior 0x13
+#define Sword_armor 0x14
+#define Lance_armor 0x15
+#define Axe_armor 0x16
+#define General 0x17
+#define Archer 0x18
+#define Archer_f 0x19
+#define Sniper 0x1A
+#define Sniper_f 0x1B
+#define Priest 0x1C
+#define Cleric 0x1D
+#define High_priest 0x1E
+#define Bishop 0x1E
+
+#define Mage 0x20
+#define Mage_f 0x21
+#define Sage 0x22
+#define Sage_f 0x23
+#define Dark_mage 0x24
+#define Dark_sage 0x25
+#define Dark_bishop 0x26
+
+#define Cavalier 0x28
+#define LanceKnight 0x29
+#define Paladin 0x2A
+#define DukeKnight 0x2B
+#define GloryKnight 0x2B
+#define Troubadour 0x2C
+#define Paladin_f 0x2D
+
+#define SwordKnight 0x2E
+#define BowKnight 0x2F
+#define FirstKnight 0x30
+#define ArrowKnight 0x31
+#define PegasusKnight 0x32
+#define SeraphKnight 0x33
+#define Wyvern_rider 0x34
+#define Wyvern_lord 0x35
+
+#define MageK 0x38
+#define Bandit 0x39
+#define Pirate 0x3A
+#define Berserker 0x3B
+#define Thief 0x3C
+#define Thief_f 0x3D
+#define Rogue 0x3E
+
+#define Bard 0x41
+#define MageKnight 0x42
+
+#define Archbishop 0x45
+
+#define Princess 0x4B
+#define RoyalKnight_f 0x4C
+#define AxeKnight 0x4D
+#define AxeKnightP 0x4E
+#define GreatKnight 0x4F
+
+#define Hunter 0x50
+#define GreatKnight_p 0x51
+#define Merchant 0x59
+//End Class_Codes
+
+
+//Music_Codes
+#define Together_we_ride 0x0042
+
+
+
+//Weapons
+#define IronSword 0x01
+#define SlimSword 0x02
+#define SteelSword 0x03
+#define SilverSword 0x04
+#define IronBlade 0x05
+#define KillingEdge 0x0D
+#define LightBrand 0x10
+
+#define IronLance 0x14
+#define SteelLance 0x16
+#define SilverLance 0x17
+#define Javelin 0x1C
+
+#define IronAxe 0x1F
+#define SteelAxe 0x20
+#define SilverAxe 0x21
+#define HandAxe 0x28
+#define Tomahawk 0x29
+
+#define IronBow 0x2C
+#define SteelBow 0x2D
+#define KillerBow 0x30
+
+#define Fire 0x37
+#define Thunder 0x38
+#define Elfire 0x39
+#define Falaflame 0x3C
+
+#define Light 0x3E
+#define Aura 0x42
+
+#define Worm 0x44
+#define Fenrir 0x47
+
+#define Heal 0x4A
+#define Mend 0x4B
+#define Silence 0x50
+
+#define ThunderSword 0x59
+#define AgilityRing 0x5D
+#define LegRing 0x61
+#define Lockpick 0x6A
+#define SteelBlade 0x72
+#define RegalSword 0x7C
+
+//End Weapons
+
+#endif //end of _FE4A_DEFINITIONS_
